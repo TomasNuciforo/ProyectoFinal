@@ -1,0 +1,301 @@
+@import 'variables';
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: $background-color;
+    color: $text-color;
+}
+
+/* Encabezado */
+/* Barra de navegación */
+nav.navbar {
+    background-color: hsl(0, 0%, 100%);
+    transition: background-color 0.5s ease;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+.navbar-brand img {
+    max-width: 70px;
+    height: auto;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    margin: 0 15px;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #2ecc71;
+    transform: scale(1.1);
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggler:hover {
+    transform: rotate(360deg);
+}
+
+/* Efecto de desplazamiento en pantallas más pequeñas */
+@media only screen and (max-width: 768px) {
+    .navbar-toggler-icon {
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+        transform: rotate(90deg);
+    }
+}
+
+/* Sección del héroe */
+.hero {
+    text-align: center;
+    padding: 100px 0;
+    background-color: $primary-color;
+    color: #fffefe;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.btn-primary {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+}
+
+.btn-primary:hover {
+    background-color: darken($secondary-color, 10%);
+    border-color: darken($secondary-color, 10%);
+}
+
+
+/* Pie de página */
+footer {
+    background-color: $primary-color;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media only screen and (max-width: 768px) {
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+}
+
+/* Media queries para pantallas aún más pequeñas, como teléfonos */
+@media only screen and (max-width: 576px) {
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+}
+
+
+/* Sección de productos */
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.productos article {
+    max-width: 300px;
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.productos article:hover {
+    transform: translateY(-5px);
+}
+
+.productos img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.productos article:hover .product-image {
+    transform: scale(1.1);
+}
+
+/* Sección de contacto */
+.contacto {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contacto h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contacto p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+/* Formulario de contacto */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+.btn-primary:hover {
+    background-color: darken(#3498db, 10%);
+    border-color: darken(#3498db, 10%);
+}
+
+
+/* Sección de Contacto */
+.contact {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+/* Sección de Redes Sociales */
+.social-media {
+    text-align: center;
+}
+
+.social-media h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-media li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.social-media img {
+    max-width: 50px;
+    height: auto;
+}
+
+/* Sección "Sobre Mí" */
+.about-me {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+}
+
+.about-me h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-me p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    max-width: 20px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Animaciones de entrada con animate.css */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+/* Sección de Testimonios */
+.testimonials {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+}
+
+.testimonials h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.testimonial p {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    text-align: right;
+    font-size: 1.2em;
+}
+
+
+
+
+
